@@ -1,0 +1,16 @@
+
+
+{% extends 'CrudApp/base.html'%}
+
+{%block parent%}
+<div class="container" align="center">
+  <h1>Employee Form</h1>
+<table>
+<form method="post">
+{{eform}}
+{%csrf_token%}
+<tr><td></td><td><input type="submit" value="Submit" /></td></tr>
+</form>
+</table>
+</div>
+{%endblock%}

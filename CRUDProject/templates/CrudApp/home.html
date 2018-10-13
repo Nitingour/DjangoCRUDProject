@@ -1,0 +1,28 @@
+
+
+{% extends 'CrudApp/base.html'%}
+
+{%block parent%}
+<div class="container" align="center">
+  <h1>Employee Details</h1>
+  {{msg}}
+<table class="table">
+  <tr><th>ID</th><th>EID</th><th>Name</th><th>Email</th><th>City</th><th>Phone</th></tr>
+     {%for emp in employees %}
+      <tr>
+         <td>{{emp.id}}</td>
+           <td>{{emp.eid}}</td>
+            <td>{{emp.ename}}</td>
+             <td>{{emp.emailid}}</td>
+              <td>{{emp.city}}</td>
+               <td>{{emp.phone}}</td>
+               <td><a href="updateemp/{{emp.id}}" class="btn btn-primary">Update </a>| <a href="deleteemp/{{emp.id}}" onclick="return confirm('Are you sure??')"  class="btn btn-primary">Delete </a></td>
+      </tr>
+     {%endfor%}
+</table>
+<a href="addemp" class="btn btn-primary">Create New Employee</a>
+</div>
+
+
+
+{%endblock%}
