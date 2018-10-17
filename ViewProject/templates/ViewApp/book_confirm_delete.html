@@ -1,0 +1,10 @@
+
+{% extends 'ViewApp/base.html'%}
+{%block parentblock%}
+<form method="post">
+{%csrf_token%}
+Do you really want to Delete???
+<input type="submit" class="btn btn-primary" value="Delete">
+<a href="/" class="btn btn-primary">Cancel</a>
+</form>
+{%endblock%}

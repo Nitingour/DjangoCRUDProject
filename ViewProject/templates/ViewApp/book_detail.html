@@ -1,0 +1,22 @@
+
+
+
+{%extends 'ViewApp/base.html'%}
+
+{%block parentblock%}
+<div class="container" >
+   <h1>{{book.bookname}} Book Details:</h1>
+    <ul>
+            <li>BookName= {{book.bookname}}</li>
+            <li>Author= {{book.author}}</li>
+            <li>Price= {{book.price}}</li>
+            <li>Publisher={{book.publisher}}</li>
+    </ul>
+<a href="/update/{{book.id}}" class="btn btn-primary" >Update Details</a>
+<a href="/delete/{{book.id}}" class="btn btn-primary" >Delete Details</a>
+
+</div>
+
+
+
+{%endblock%}
